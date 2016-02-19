@@ -1,0 +1,8 @@
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\example1')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\example2')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\example3')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\example4-predict')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\example5-images')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\manipulate')
+setwd('C:\\Users\\db345c\\Desktop\\Developing Data Products\\Week1\\googleVis')
+library(shiny)

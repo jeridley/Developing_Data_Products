@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nsuppressWarnings(library(shiny))\nsuppressWarnings(attach(faithful))\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Predict Old Faithful Geyser Eruption Duration\"),\n\n  sidebarLayout(\n    sidebarPanel(\n        sliderInput(\"time\", \"Time in minutes:\", min = 60, max = 120, value = 80)\n    ),\n\n    # print predictions\n    mainPanel(\n        p(\"The purpose of this Shiny app is to display prediction of eruption duration times\n           based on the waiting time in minutes of the Old Faithful Geyser. The model shows the \n           lower and upper eruption duration bounds based on the waiting time.\"),\n        p(\"The slider represents the minutes of waiting (from 60 to 120). By moving the slider\n          the lower and upper bounds of the eruption duration time are adjusted.\"),\n        p(\"The algorithm employs simplielinear model of eruption durations vs. waiting times of the\",\n          strong(span(\"faithful\", style = \"color:blue\")), \"data set available in the base installation of R.\"),\n        p(\"The linear model is about\", strong(span(\"95%\", style=\"color:red\")), \"accurate.\"),\n        strong(em(textOutput(\"lower\"))),\n        strong(em(textOutput(\"upper\")))\n    )\n  )\n))\n",
+    "created" : 1455749217820.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1031699636",
+    "id" : "45F3ACF4",
+    "lastKnownWriteTime" : 1455754464,
+    "path" : "C:/Users/db345c/Desktop/Developing Data Products/Final_Project/shiny_app/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

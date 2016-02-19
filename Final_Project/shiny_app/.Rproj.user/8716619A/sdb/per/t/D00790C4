@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\nattach(faithful)\n\nfit.lm <- lm(eruptions ~ waiting)\n\nshinyServer(function(input, output) {\n    \n    output$lower <- renderText ({\n        newdata <- data.frame(waiting=input$time)\n        g <- predict(fit.lm, newdata, interval=\"predict\")\n        paste(\"Lower: \", signif(g[2], 6), \" minutes.\")\n    })\n    \n    output$upper <- renderText ({\n        newdata <- data.frame(waiting=input$time)\n        g <- predict(fit.lm, newdata, interval=\"predict\")\n        paste(\"Upper: \", signif(g[3], 6), \" minutes.\")\n    })\n    \n    \n})\n",
+    "created" : 1455749218049.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1102989063",
+    "id" : "D00790C4",
+    "lastKnownWriteTime" : 1455753722,
+    "path" : "C:/Users/db345c/Desktop/Developing Data Products/Final_Project/shiny_app/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

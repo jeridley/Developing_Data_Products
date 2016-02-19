@@ -1,0 +1,9 @@
+Package: topten
+Type: Package
+Title: Building a Prediction Model from Top 10 Features
+Version: 0.1
+Date: 2016-02-17
+Author: Alekey Kramer
+Maintainer: Aleksey Kramer <imbisil@gmail.com>
+Description: Functions for building an predicting from models.
+License: GPL-3
