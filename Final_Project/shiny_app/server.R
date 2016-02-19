@@ -12,17 +12,19 @@ fit.lm <- lm(eruptions ~ waiting)
 
 shinyServer(function(input, output) {
     
-    output$lower <- renderText ({
-        newdata <- data.frame(waiting=input$time)
+    output$pred <- renderPrint ({
+        
+        # build sequence
+        rng <- seq(from=60, to=input$time, by=c(5))
+        
+        # generate data frame to suply to predict function
+        newdata <- data.frame(waiting=rng)
+        
+        # generate predictions
         g <- predict(fit.lm, newdata, interval="predict")
-        paste("Lower: ", signif(g[2], 6), " minutes.")
+        
+        # print predictions
+        g
+        
     })
-    
-    output$upper <- renderText ({
-        newdata <- data.frame(waiting=input$time)
-        g <- predict(fit.lm, newdata, interval="predict")
-        paste("Upper: ", signif(g[3], 6), " minutes.")
-    })
-    
-    
 })

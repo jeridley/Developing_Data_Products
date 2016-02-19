@@ -2,3 +2,4 @@ videos
 .RData
 .Rhistory
 .gitignore
+.Rproj.user

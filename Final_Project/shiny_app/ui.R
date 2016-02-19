@@ -15,7 +15,7 @@ shinyUI(fluidPage(
 
   sidebarLayout(
     sidebarPanel(
-        sliderInput("time", "Time in minutes:", min = 60, max = 120, value = 80)
+        sliderInput("time", "Time in minutes:", min = 60, max = 120, value = 80, step = 5)
     ),
 
     # print predictions
@@ -28,8 +28,7 @@ shinyUI(fluidPage(
         p("The algorithm employs simplielinear model of eruption durations vs. waiting times of the",
           strong(span("faithful", style = "color:blue")), "data set available in the base installation of R."),
         p("The linear model is about", strong(span("95%", style="color:red")), "accurate."),
-        strong(em(textOutput("lower"))),
-        strong(em(textOutput("upper")))
+        verbatimTextOutput("pred")
     )
   )
 ))
