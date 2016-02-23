@@ -12,6 +12,18 @@ fit.lm <- lm(eruptions ~ waiting)
 
 shinyServer(function(input, output) {
     
+    output$indpred <- renderPrint({
+        
+        # build data frame
+        newdata <- data.frame(waiting=input$time)
+        
+        # Generate individual prediction
+        g1 <- predict(fit.lm, newdata, interval="predict")
+        
+        # print individual prediction
+        g1
+    })
+    
     output$pred <- renderPrint ({
         
         # build sequence
@@ -27,4 +39,5 @@ shinyServer(function(input, output) {
         g
         
     })
+    
 })
