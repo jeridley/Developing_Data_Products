@@ -56,9 +56,9 @@ the **faithful** data set presented below.
 Links
 ========================================================
 To run the Shiny application, click on the link to the **Shiny application** 
-found in the list below. The Shiny application should open in the **browser window**
+found in the list below. The Shiny application should open in the **browser window** 
 presenting short write up and a slider.  By **moving the slider**, new predictions are
 displayed **just below the write up** on the app window as the slider is moved.
-- [GitHub Repo]()
-- [Shiny Application]()
-- [This Presentation]()
+- GitHub repo: [https://github.com/voite1/Developing_Data_Products/tree/master/Final_Project](https://github.com/voite1/Developing_Data_Products/tree/master/Final_Project)
+- Shiny Application: [https://voitel.shinyapps.io/shiny_app/](https://voitel.shinyapps.io/shiny_app/)
+- This Presentation: [http://rpubs.com/voitel/ddp_final_presentation](http://rpubs.com/voitel/ddp_final_presentation)

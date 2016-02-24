@@ -4,6 +4,9 @@
 #
 # http://shiny.rstudio.com
 #
+# library(rsconnect)
+# deployApp()
+# APP URL: https://voitel.shinyapps.io/shiny_app/
 
 suppressWarnings(library(shiny))
 suppressWarnings(attach(faithful))
