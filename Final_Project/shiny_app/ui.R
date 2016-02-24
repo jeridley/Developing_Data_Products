@@ -18,7 +18,8 @@ shinyUI(fluidPage(
 
   sidebarLayout(
     sidebarPanel(
-        sliderInput("time", "Time in minutes:", min = 60, max = 120, value = 60, step = 5)
+        sliderInput("time", "Time in minutes:", min = 60, max = 120, value = 60, step = 5),
+        submitButton("Click to Predict")
     ),
 
     # print predictions
